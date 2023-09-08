@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
@@ -26,4 +27,5 @@ if (n > 0)
 	}
 
 	return (0);
-}
+
+	}
