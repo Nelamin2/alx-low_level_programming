@@ -4,6 +4,7 @@
  * main - main function
  * Description: Find and print the first 98 fibonacci numbers starting with 1 and 2.
  * Return: 0
+ * Numbers should be coma and space separated.
  */
 int main(void)
 {
@@ -18,14 +19,14 @@ int main(void)
 		{
 			f1 = (c + d) / LARGEST;
 			f2 = (c + d) % LARGEST;
-			f3 = a+ b + f1;
+			f3 = a + b + f1;
 			a = b, b = f3;
-			a = b, b = f2;
+			c = d, d = f2;
 			printf("%lu%010lu", b, d);
 		}
 		else
 		{
-			f2 = a + b;
+			f2 = c + d;
 			c = d, d = f2;
 			printf("%lu", d);
 		}
