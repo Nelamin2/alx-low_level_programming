@@ -9,9 +9,8 @@ int main(void)
 {
         int i;
 
-        i = 0;
+        i = i;
         positive_or_negative(i);
 
         return (0);
 }
-car
