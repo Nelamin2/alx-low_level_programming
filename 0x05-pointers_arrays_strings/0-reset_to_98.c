@@ -10,18 +10,18 @@
 
 void reset_to_98(int *n)
 {
-    *n = 98; // Update the value pointed to by ptr to 98
+    *n = 98; 
 }
 
 int main()
 {
-    int num = 42; // Declare an integer variable
-    int *n = &num; // Create a pointer to num
+    int num = 42; 
+    int *n = &num; 
 
     printf("Before update: num = %d\n", num);
 
-    // Call the function to update the value
-    reset_to_98(ptr);
+    
+    reset_to_98(n);
 
     printf("After update: num = %d\n", num);
 
