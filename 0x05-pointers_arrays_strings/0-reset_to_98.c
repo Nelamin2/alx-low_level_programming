@@ -13,17 +13,3 @@ void reset_to_98(int *n)
     *n = 98; 
 }
 
-int main()
-{
-    int num = 42; 
-    int *n = &num; 
-
-    printf("Before update: num = %d\n", num);
-
-    
-    reset_to_98(n);
-
-    printf("After update: num = %d\n", num);
-
-    return 0;
-}
