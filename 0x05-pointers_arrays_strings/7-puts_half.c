@@ -5,9 +5,10 @@ include "main.h"
  * @str: input
  * Return: half of input
  */
-void puts_half(char *str)
-{
-	int a, n, longi;
+void puts_half(char *str) {
+	int a;
+	int n;
+        int longi;
 
 	longi = 0;
 
