@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include guard 
 
 void print_name(char *name, void (*f)(char *));
 int _putchar(char c);
