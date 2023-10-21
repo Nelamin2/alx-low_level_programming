@@ -16,5 +16,5 @@ tep = head->next;
 free(head->str);
 free(head);
 head = tmp;
-}
+return()
 }
