@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * free_list - frees a linked list
@@ -9,12 +10,12 @@
  */
 void free_list(list_t *head)
 {
-list_t *temp;
+list_t *tmp;
 while (head)
 {
-tep = head->next;
+tmp = head->next;
 free(head->str);
 free(head);
 head = tmp;
-return()
+}
 }
