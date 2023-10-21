@@ -27,13 +27,13 @@ newnode->next = NULL;
 if (*head == NULL)
 {
 *head = newnode;
-return (newnode); 
+return (newnode);
 }
 while (tmp->next)
 {tmp = tmp->next;
 
 tmp->next = newnode;
 }
- return (newnode);
+return (newnode);
 }
 
