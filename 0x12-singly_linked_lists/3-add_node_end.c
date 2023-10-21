@@ -31,10 +31,8 @@ if (tmp == NULL)
 return (newnode);
 }
 while (tmp->next)
-{tmp = tmp->next;
+tmp = tmp->next;
 
 tmp->next = newnode;
-}
 return (newnode);
 }
-
