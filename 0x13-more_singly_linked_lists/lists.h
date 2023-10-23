@@ -1,6 +1,5 @@
 #ifndef LISTS_H
 #define LISTS_H
-#include guard
 #include<unistd.h>
 #include<stddef.h>
 
