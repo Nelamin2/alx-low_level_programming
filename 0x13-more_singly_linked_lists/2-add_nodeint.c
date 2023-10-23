@@ -15,10 +15,10 @@ ptr = malloc(sizeof(listint_t));
 if (ptr == NULL)
 return (NULL);
 if (*head == NULL)
-ptr->next == NULL,
+ptr->next = NULL;
 else
 ptr->next = *head;
 ptr->n = n;
 *head = ptr;
-return (head);
+return (*head);
 }
