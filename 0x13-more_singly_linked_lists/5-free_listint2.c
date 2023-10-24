@@ -14,5 +14,5 @@ while (*head)
 free(*head);
 *head = ptr;
 }
-*head ==  NULL;
+*head =  NULL;
 }
