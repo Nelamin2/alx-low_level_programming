@@ -8,6 +8,7 @@
  *
  * Return: Always 0.
  */
+void free_listint2(listint_t **head);
 int main(void)
 {
     listint_t *head;
@@ -24,5 +25,4 @@ int main(void)
     add_nodeint_end(&head, 1024);
     sum = sum_listint(head);
     printf("sum = %d\n", sum);
-    free_listint2(&head);
-   
+    free_listint2(&head);  
