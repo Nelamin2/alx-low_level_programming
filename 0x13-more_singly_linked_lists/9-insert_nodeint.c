@@ -38,5 +38,4 @@ return (new);
 else
 ptr = ptr->next;
 }
-return (NULL);
 }
