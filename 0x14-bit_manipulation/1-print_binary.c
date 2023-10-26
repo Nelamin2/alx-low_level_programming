@@ -8,15 +8,15 @@
 *Return: void
 */
 
-void check(unsihgned long int n)
+void check(unsigned long int n)
 {
 if (n == 0)
 return;
 check(n >> 1);
 if ((n & 1) == 1)
-printf("'1'\n");
+_putchar('1');
 if ((n & 1) == 0)
-printf("'0'\n");
+_putchar('0');
 }
 
 /**
@@ -28,9 +28,7 @@ printf("'0'\n");
 void print_binary(unsigned long int n)
 {
 if (n == 0)
-printf("'0'\n");
+_putchar('0');
 else
-{
-check(n)
+check(n);
 }
-
