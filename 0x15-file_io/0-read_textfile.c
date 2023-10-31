@@ -1,7 +1,7 @@
 #include "main.h"
 #include<unistd.h>
 #include<sys/types.h>
-#include<sys.stats.h>
+#include<sys/stat.h>
 #include<fcntl.h>
 #include<stdlib.h>
 
@@ -13,26 +13,26 @@
  * 0 if the file can not be opened or read
  **/
 
-ssize_t read_textfile(const char *filename, size_t letters);
-{	
+ssize_t read_textfile(const char *filename, size_t letters)
+{
 char *buffer;
 int discriptor;
 ssize_t numbers_r, numbers_w;
 if(filename == NULL)
 return (0);
-discriptor  = fopen(filename, O_RDONLY);
+discriptor  = open(filename, O_RDONLY);
 if(discriptor == -1)
 return (0);
-buffer = (sizeof(char) * letters);
+buffer = malloc (sizeof(char) * letters);
 if(buffer == NULL)
-fclose(my_file);
+close(discriptor);
 return (0);
-numbers_r = read(discription, buffer, letters);
-fclose(my_file)
+numbers_r = read(discriptor, buffer, letters);
+close(discriptor);
 if(numbers_r == -1)
 free(buffer);
-numbers_w = write(discription, buffer, numbers_r)
-if(numbers_r !== numbers_w)
+numbers_w = write(discriptor, buffer, numbers_r);
+if(numbers_r != numbers_w)
 return(0);
 return (numbers_w);
 }
