@@ -29,10 +29,8 @@ close(discriptor);
 return (0);
 numbers_r = read(discriptor, buffer, letters);
 if (numbers_r == -1)
-free(buffer);
 close(discriptor);
 numbers_w = write(STDOUT_FILENO, buffer, numbers_r);
-free(buffer);
 close(discriptor);
 if (numbers_r != numbers_w)
 return (0);
