@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 char *buffer;
 int discriptor;
-ssize_t numbers_r, numbers_w;
+int  numbers_r, numbers_w;
 if (filename == NULL)
 return (0);
 discriptor  = open(filename, O_RDONLY);
@@ -25,14 +25,13 @@ if (discriptor == -1)
 return (0);
 buffer = malloc(sizeof(char) * letters);
 if (buffer == NULL)
-close(discriptor);
 return (0);
 numbers_r = read(discriptor, buffer, letters);
 if (numbers_r == -1)
 close(discriptor);
 numbers_w = write(STDOUT_FILENO, buffer, numbers_r);
 close(discriptor);
-if (numbers_r != numbers_w)
+if (numbers_w == -1 || numbers_w != numbers_r)
 return (0);
 return (numbers_w);
 }
