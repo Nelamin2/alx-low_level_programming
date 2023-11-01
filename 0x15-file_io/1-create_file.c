@@ -22,7 +22,7 @@ return (0);
 if (text_content != NULL)
 {
 ssize_t rw = write(discriptor, text_content, strlen(text_content));
-close (discriptor);
+close(discriptor);
 if (rw == -1)
 {
 return (-1);
