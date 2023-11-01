@@ -4,7 +4,7 @@
 #include<sys/stat.h>
 #include<fcntl.h>
 #include<stdlib.h>
-
+#include<string.h>
 /**
  * create_file - create a file and write on it
  * @filename: a pointer to afile
@@ -22,14 +22,17 @@ return (-1);
 discriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 if (discriptor == -1)
 return (0);
-if (!text_content)
+if (text_content != NULL)
+{
+ssize_t re = write(discriptor, text_content, strlen(text_content));
+close(discriptor);
+if (re == -1)
+{
 return (-1);
-text_content = "";
-for (new = 0; text_content[new]; new++)
-{rw = write(discriptor, text_content, new);
-if (rw == -1)
-return (-1);
+}
+}
+else
+{
 close(discriptor);
 }
 return (1);
-}
