@@ -14,8 +14,6 @@
 int create_file(const char *filename, char *text_content)
 {
 int discriptor;
-int rw;
-int new;
 if (!filename)
 return (-1);
 discriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
@@ -23,9 +21,9 @@ if (discriptor == -1)
 return (0);
 if (text_content != NULL)
 {
-ssize_t re = write(discriptor, text_content, strlen(text_content));
-close(discriptor);
-if (re == -1)
+ssize_t rw = write(discriptor, text_content, strlen(text_content));
+close (discriptor);
+if (rw == -1)
 {
 return (-1);
 }
@@ -35,3 +33,4 @@ else
 close(discriptor);
 }
 return (1);
+}
