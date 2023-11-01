@@ -20,7 +20,7 @@ int discriptor;
 ssize_t numbers_r, numbers_w;
 if (filename == NULL)
 return (0);
-discriptor  = open(filename, O_RDWR);
+discriptor  = open(filename, O_RDONLY);
 if (discriptor == -1)
 return (0);
 buffer = malloc(sizeof(char) * letters);
@@ -28,10 +28,12 @@ if (buffer == NULL)
 close(discriptor);
 return (0);
 numbers_r = read(discriptor, buffer, letters);
-close(discriptor);
 if (numbers_r == -1)
 free(buffer);
+close(discriptor);
 numbers_w = write(STDOUT_FILENO, buffer, numbers_r);
+free(buffer);
+close(discriptor);
 if (numbers_r != numbers_w)
 return (0);
 return (numbers_w);
