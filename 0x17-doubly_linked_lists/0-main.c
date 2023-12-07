@@ -1,4 +1,3 @@
-julien@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
