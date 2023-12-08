@@ -1,2 +1,3 @@
-My second readme
-This is my readme file
+0x03-debugging
+0x14-bit_manipulation
+0x17-doubly_linked_lists
