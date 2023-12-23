@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "hash_tables.h"
+
 /**
  * hash_djb2 - implements the djb2 function
  *@str: string of key
